@@ -1,0 +1,18 @@
+<IfModule mod_headers.c>
+    <FilesMatch "\.(js|css|json|png|jpg|jpeg|gif|svg)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+
+    # Ensure correct MIME type for module scripts
+    AddType application/javascript .js
+</IfModule>
+
+# Fallback routing for single-page applications
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
