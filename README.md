@@ -1,40 +1,21 @@
-# Welcome to Remix!
+# AutoElite Car Marketplace
 
-- ð [Remix docs](https://remix.run/docs)
+## Setup Instructions
 
-## Development
+### Environment Variables
 
-Run the dev server:
+1. Create a `.env` file in the project root
+2. Add your Supabase credentials:
+   ```
+   VITE_SUPABASE_URL=your_supabase_project_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
 
-```shellscript
+3. These can be found in your Supabase project settings under API
+
+### Installation
+
+```bash
+npm install
 npm run dev
 ```
-
-## Deployment
-
-First, build your app for production:
-
-```sh
-npm run build
-```
-
-Then run the app in production mode:
-
-```sh
-npm start
-```
-
-Now you'll need to pick a host to deploy it to.
-
-### DIY
-
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
